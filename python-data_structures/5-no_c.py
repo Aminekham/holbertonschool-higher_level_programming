@@ -3,7 +3,7 @@ def no_c(my_string):
     newstr = ""
     for ch in (my_string):
         if (ch == 'c' or ch == 'C'):
-            newstr+= ''
+            newstr += ''
         else:
-            newstr+= ch
+            newstr += ch
     return(newstr)
