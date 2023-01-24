@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    s,s1 =len(tuple_a), len(tuple_b)
-    x,y,x1,y1 =0, 0, 0, 0
+    s, s1 =len(tuple_a), len(tuple_b)
+    x, y, x1, y1 =0, 0, 0, 0
     if s > 0:
         x = tuple_a[0]
     if s > 1:
