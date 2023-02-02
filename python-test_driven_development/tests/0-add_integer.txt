@@ -1,0 +1,48 @@
+In this testing file : 
+                        -tested function: add integer
+                        -file: 0-add_integer.py
+                        -tool used in testing: doctest
+importing the function:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+testing cases :
+    test case 1:
+    >>> add_integer(0.2, 98)
+    98
+
+    test case 2:
+    >>> add_integer("fa", "5")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    test case 3:
+    >>> add_integer(5, "holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    test case 4:
+    >>> add_integer(65.3, 4.7)
+    69
+
+    test case 5:
+    >>> add_integer(12, 8)
+    20
+
+    test case 6:
+    >>> add_integer(105.3, -5)
+    100
+
+    test case 7:
+    >>> add_integer(55, "holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    test case 8:
+    >>> add_integer(5, )
+    103
+
+    in the last test case we shouldnt forget that b is initialized to 98
