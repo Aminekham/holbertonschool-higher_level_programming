@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """Define an square with size class and functions"""
 
 
@@ -8,7 +7,7 @@ class Square:
     __size = None
     __position = None
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         if type(position) != tuple or (position[0] < 0 or position[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
