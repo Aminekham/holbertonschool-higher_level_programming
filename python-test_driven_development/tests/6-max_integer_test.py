@@ -4,7 +4,8 @@
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
-class texting(unittest.TestCode):
+
+class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         self.assertEqual(max_integer([]), None)
 
