@@ -5,6 +5,11 @@
 
 
 def matrix_divided(matrix, div):
+    """
+        dividing a whole matrix
+        using some functions to validate the matrix
+        create a new returning function with the division results
+    """
     new_mat = []
     if type(div) != int and type(div) != float:
         raise TypeError("div must be a number")
