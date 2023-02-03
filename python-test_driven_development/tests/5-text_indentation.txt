@@ -8,3 +8,4 @@ setting up the module :
     >>> print_square = __import__('4-print_square').print_square
 
 testing cases:
+>>> print_square()
