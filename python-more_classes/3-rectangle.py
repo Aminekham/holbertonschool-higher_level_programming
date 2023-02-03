@@ -56,4 +56,3 @@ class Rectangle:
             else:
                 print("#")
         return("")
-        
