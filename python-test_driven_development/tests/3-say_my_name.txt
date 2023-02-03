@@ -1,0 +1,11 @@
+This is the testing file for my say_my_name module
+testing cases : - a list of list of integer divided by integer
+                - a list of list of integer divided by a string
+                - a list of list of integer divided by a 0
+                - a non valid matrix
+                - not a rectangular matrix
+                - a div = float(inf)
+                - ...
+
+setting up the module :
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
