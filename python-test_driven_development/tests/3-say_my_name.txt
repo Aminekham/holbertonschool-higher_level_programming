@@ -9,3 +9,20 @@ testing cases : - a list of list of integer divided by integer
 
 setting up the module :
     >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+testing cases:
+>>> say_my_name("mohammed amine", "khammessi")
+My name is mohammed amine khammessi
+
+>>> say_my_name("amine", 5)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> say_my_name(5, "khammessi")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> say_my_name(, )
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
