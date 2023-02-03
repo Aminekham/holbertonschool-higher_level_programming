@@ -1,1 +1,51 @@
->>> zdouziddslkdj
+This is the testing file for our matrix division module
+testing cases : - a list of list of integer divided by integer
+                - a list of list of integer divided by a string
+                - a list of list of integer divided by a 0
+                - a non valid matrix
+                - not a rectangular matrix
+                - a div = float(inf)
+                - ...
+
+setting up the module :
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+the testing cases :
+>>> matrix_divided([[1, 2], [1, 3]], 4)
+[[0.25, 0.5], [0.25, 0.75]]
+>>> matrix_divided([[1, 2], [1, 3]], "string")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix_divided([[1, 2], [1, 3]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix_divided([["s", 20], ["ff", "try"]], 5)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[2, 5, 6], [1, 2]], 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+>>> matrix_divided([[2, 6], [8, 5]], float(inf))
+Traceback (most recent call last):
+...
+NameError: name 'inf' is not defined
+>>> matrix_divided([[2, 5], [8, float(inf)]], 4)
+Traceback (most recent call last):
+...
+NameError: name 'inf' is not defined
+>>> matrix_divided([2, 5], [6, float(inf)], float(inf))
+Traceback (most recent call last):
+...
+NameError: name 'inf' is not defined
+>>> matrix_divided(, 4)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+>>> matrix_divided(,)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
