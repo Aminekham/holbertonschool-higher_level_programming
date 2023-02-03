@@ -10,9 +10,7 @@ def text_indentation(text):
     """
     if type(text) != str:
         raise TypeError("text must be a string")
-    for i in range(len(text)):
-        if text[i] == "." or text[i] == "?" or text[i] == ":":
-            print(text[i])
-            print()
-        else:
-            print(text[i], end="")
+    chars = [".", "?", ":"]
+    for char in chars:
+        text = text.replace(char, char +"\n\n")
+    print(text.strip(), end = "")
