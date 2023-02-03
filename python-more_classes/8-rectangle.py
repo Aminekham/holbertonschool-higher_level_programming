@@ -78,4 +78,3 @@ class Rectangle:
             return()
         if rect_1.height * rect_1.width >= rect_2.height * rect_2.width:
             return(rect_1)
-    
