@@ -1,0 +1,10 @@
+This is the testing file for my print_square module
+testing cases : - testing with a valid integer
+                - testing with a string
+                - testing with a negative number
+                - testing with an empty input
+
+setting up the module :
+    >>> print_square = __import__('4-print_square').print_square
+
+testing cases:
