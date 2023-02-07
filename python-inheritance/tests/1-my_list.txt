@@ -17,3 +17,5 @@ the testing cases :
 >>> lis.append(-5)
 >>> lis.print_sorted()
 [-5, 1]
+>>> l = lis.print_sorted()
+[-5, 1]
