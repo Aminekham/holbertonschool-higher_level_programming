@@ -2,7 +2,8 @@ This is the testing file for our list sorting module
 testing cases : - ...
 
 setting up the module :
-    >>> my_list = __import__('1-my_list').Mylist
+>>> my_list = __import__('1-my_list').MyList
 
 the testing cases :
 >>> my_list()
+[]
