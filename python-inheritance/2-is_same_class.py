@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-this module tells if the object 
+this module tells if the object is an instance of the class
 """
 
 
