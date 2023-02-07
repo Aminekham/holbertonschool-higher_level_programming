@@ -7,3 +7,13 @@ setting up the module :
 the testing cases :
 >>> my_list()
 []
+>>> lis = my_list()
+>>> lis.print_sorted()
+[]
+>>> lis.append(1)
+
+>>> lis.print_sorted()
+[1]
+>>> lis.append(-5)
+>>> lis.print_sorted()
+[-5, 1]
