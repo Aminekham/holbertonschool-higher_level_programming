@@ -1,0 +1,8 @@
+This is the testing file for our matrix division module
+testing cases : - a list of list of integer divided by integer
+                - a list of list of integer divided by a string
+                - a list of list of integer divided by a 0
+                - a non valid matrix
+                - not a rectangular matrix
+                - a div = float(inf)
+                - ...
