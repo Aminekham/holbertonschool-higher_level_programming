@@ -16,5 +16,6 @@ class Square(rect):
         self._Rectangle__width = size
         self._Rectangle__height = size
         self.__size = size
+
     def area(self):
         return(self.__size ** 2)
