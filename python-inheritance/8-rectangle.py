@@ -5,6 +5,8 @@ this is the rectangle class inhereted from the geometry class
 
 
 base = __import__('7-base_geometry').BaseGeometry
+
+
 class Rectangle(base):
     """
     the validation and assignment of height and width
