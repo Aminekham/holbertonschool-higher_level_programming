@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>holbertonschool-higher_level_programming</title>
   </head>
   <body>
     <h1>holbertonschool-higher_level_programming/python-input_output</h1>
