@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script adds the arguments from command line to a list and saves a json format
+This script adds the arguments from command line to a list and saves a json
 """
 
 import sys
