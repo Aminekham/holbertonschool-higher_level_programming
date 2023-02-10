@@ -4,70 +4,65 @@ testing cases : - ...
 setting up the module :
 >>> base = __import__('7-base_geometry').BaseGeometry
 
->>> base.integer_validator("my_int", "melel")
+>>> bg.integer_validator("my_int", "test")
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: my_int must be an integer
 
->>> base.integer_validator("my_int", -1)
+>>> bg.integer_validator("my_int", -1)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+ValueError: my_int must be greater than 0
 
->>> base.integer_validator("age", None)
+>>> bg.integer_validator("age", None)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: age must be an integer
 
->>> base.integer_validator("age", {3, 4})
+>>> bg.integer_validator("age", {3, 4})
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: age must be an integer
 
->>> base.integer_validator("age", 0)
+>>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+ValueError: age must be greater than 0
 
->>> base.integer_validator("age", 1)
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/doctest.py", line 1350, in __run
-    exec(compile(example.source, filename, "single",
-  File "<doctest 7-base_geometry.txt[6]>", line 1, in <module>
-    base.integer_validator("age", 1)
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+>>> bg.integer_validator("age", 1)
 
->>> base.integer_validator("age", (4,))
+>>> bg.integer_validator("age", (4,))
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: age must be an integer
 
->>> base.integer_validator("age", [3])
+
+>>> bg.integer_validator("age", [3])
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: age must be an integer
 
->>> base.integer_validator("age", True)
+>>> bg.integer_validator("age", True)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: age must be an integer
 
->>> base.integer_validator("age")
+>>> bg.integer_validator("age")
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
->>> base.integer_validator()
+>>> bg.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
->>> base.integer_validator("age", True)
+>>> bg.integer_validator("age", True)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: age must be an integer
 
->>> base.area()
+>>> bg.area()
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.area() missing 1 required positional argument: 'self'
+Exception: area() is not implemented
