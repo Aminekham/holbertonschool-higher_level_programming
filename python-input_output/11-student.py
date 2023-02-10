@@ -23,6 +23,7 @@ class Student:
                         dic[i] = self.__dict__[j]
             return(dic)
         return(self.__dict__)
+
     def reload_from_json(self, json):
         for i in json:
             if i == "first_name":
@@ -31,5 +32,3 @@ class Student:
                 self.last_name = json[i]
             elif i == "age":
                 self.age = json[i]
-
-                
