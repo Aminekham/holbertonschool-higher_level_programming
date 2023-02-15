@@ -124,5 +124,8 @@ class Rectangle(Base):
         if "y" in kwargs.keys():
             self.__y = kwargs["y"]
     def to_dictionary(self):
+        """
+        The method to return the dictionary from the rectangle class
+        """
         dic = {'x':self.__x, 'y':self.__y, 'id':self.id, 'height': self.__height, 'width': self.__width}
         return(dic)
