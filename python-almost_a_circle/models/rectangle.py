@@ -96,3 +96,17 @@ class Rectangle(Base):
     def __str__(self):
         save = f"{self.__width}/{self.__height}"
         return(f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {save}")
+
+    def update(self, *args):
+        if len(args) > 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                elif i == 1:
+                    self.__width = args[1]
+                elif i == 2:
+                    self.__height = args[2]
+                elif i == 3:
+                    self.__x = args[3]
+                elif i == 4:
+                    self.__y = args[4]
