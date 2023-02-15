@@ -98,6 +98,9 @@ class Rectangle(Base):
         return(f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {save}")
 
     def update(self, *args):
+        """
+        Update the class attributes with args as input
+        """
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
