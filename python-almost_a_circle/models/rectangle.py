@@ -127,5 +127,8 @@ class Rectangle(Base):
         """
         The method to return the dictionary from the rectangle class
         """
-        dic = {'x':self.__x,'y':self.__y,'id':self.id,'height': self.__height,'width': self.__width}
+        dic = {'x': self.__x,'y': self.__y}
+        dic['id'] = self.id
+        dic['width'] = self.__width
+        dic['height'] = self.__height
         return(dic)
