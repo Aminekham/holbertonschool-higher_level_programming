@@ -10,7 +10,7 @@ class Square(Rectangle):
     The init function and the string representation
     """
     def __init__(self, size, x=0, y=0, id=None):
-        if not isinstance(size, int):
+        if type(size) is not int:
             raise TypeError("size must be an integer")
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
