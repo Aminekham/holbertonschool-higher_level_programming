@@ -5,7 +5,6 @@ This module is the base for the next objects
 import json
 
 
-
 class Base:
     """
     defining the number of objects and assining id
