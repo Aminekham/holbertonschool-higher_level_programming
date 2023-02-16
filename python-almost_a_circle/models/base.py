@@ -2,6 +2,8 @@
 """
 This module is the base for the next objects
 """
+import json
+
 
 
 class Base:
@@ -22,7 +24,6 @@ class Base:
         """
         This method returns the json representation of list_dictionaries
         """
-        import json
         if list_dictionaries is None or list_dictionaries == []:
             return("[]")
         return(json.dumps(list_dictionaries))
@@ -32,7 +33,6 @@ class Base:
         """
         The method to save the json format to a .json file
         """
-        import json
         if list_objs is None:
             list_objs = []
         with open(f"{cls.__name__}.json", "w") as f:
@@ -43,3 +43,8 @@ class Base:
                 list_dic.append(d)
             s = cls.to_json_string(list_dic)
             f.write(s)
+
+    def from_json_string(json_string):
+        if json_string is None or json_string == "":
+            return([])
+        return(json.loads(json_string))
