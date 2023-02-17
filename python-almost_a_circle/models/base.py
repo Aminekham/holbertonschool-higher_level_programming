@@ -71,6 +71,7 @@ class Base:
         for i in x:
             lis.append(cls.create(**i))
         return(lis)
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         """
@@ -79,7 +80,6 @@ class Base:
         import turtle
         screen = turtle.Screen()
         t = turtle.Turtle()
-        t.speed(3)
         for rectangle in list_rectangles:
             t.penup()
             t.goto(rectangle.x, rectangle.y)
