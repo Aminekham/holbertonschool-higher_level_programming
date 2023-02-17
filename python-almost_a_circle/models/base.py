@@ -53,6 +53,6 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        x = cls(1, 1)
+        x = cls(1, 0)
         x.update(**dictionary)
         return(x)
