@@ -59,3 +59,14 @@ class Base:
             x = cls(1)
         x.update(**dictionary)
         return(x)
+
+    @classmethod
+    def load_from_file(cls):
+        lis = []
+        f = open(cls.__name__ + ".json", "r")
+        if f is None:
+            return(lis)
+        x = cls.from_json_string(f.read())
+        for i in x:
+            lis.append(cls.create(**i))
+        return(lis)
