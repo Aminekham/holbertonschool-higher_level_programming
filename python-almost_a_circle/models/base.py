@@ -71,3 +71,31 @@ class Base:
         for i in x:
             lis.append(cls.create(**i))
         return(lis)
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        This method draws the needed list of rectangles and squares
+        """
+        import turtle
+        screen = turtle.Screen()
+        t = turtle.Turtle()
+        t.speed(3)
+        for rectangle in list_rectangles:
+            t.penup()
+            t.goto(rectangle.x, rectangle.y)
+            t.pendown()
+            t.color("blue")
+            for i in range(2):
+                t.forward(rectangle.width)
+                t.left(90)
+                t.forward(rectangle.height)
+                t.left(90)
+        for square in list_squares:
+            t.penup()
+            t.goto(square.x, square.y)
+            t.pendown()
+            t.color("yellow")
+            for i in range(4):
+                t.forward(square.size)
+                t.left(90)
+        turtle.done()
