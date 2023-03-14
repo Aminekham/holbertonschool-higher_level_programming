@@ -1,2 +1,1 @@
-^--first sql file
-SHOW DATABASES;
+SHOW SCHEMAS;--showing all the databases(alternative for show databases)
