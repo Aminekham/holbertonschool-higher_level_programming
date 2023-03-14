@@ -1,1 +1,2 @@
-SHOW SCHEMAS;--showing all the databases(alternative for show databases)
+--showing all the databases(alternative for show databases)
+SHOW SCHEMAS;
