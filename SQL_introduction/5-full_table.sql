@@ -1,2 +1,2 @@
 -- Giving the full description
-SHOW SCHEMA TABLE first_table;
+SHOW CREATE TABLE first_table;
