@@ -1,4 +1,4 @@
 ^--
 first sql file
 --^
-SELECT *;
+SHOW DATABASES;
