@@ -1,4 +1,2 @@
-^--
-first sql file
---^
+^--first sql file
 SHOW DATABASES;
