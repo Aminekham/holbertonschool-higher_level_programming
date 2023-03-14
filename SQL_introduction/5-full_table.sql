@@ -1,2 +1,2 @@
 -- Giving the full description
-SHOW SCHEMA first_table;
+SHOW SCHEMA TABLE first_table;
