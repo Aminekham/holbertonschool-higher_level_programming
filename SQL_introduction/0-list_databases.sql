@@ -1,1 +1,4 @@
-SELECT *
+^--
+first sql file
+--^
+SELECT *;
