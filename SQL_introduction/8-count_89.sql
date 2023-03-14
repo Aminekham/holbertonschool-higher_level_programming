@@ -1,2 +1,2 @@
 -- showing a certain record
-SELECT * FROM first_table WHERE id = 89;
+SELECT count(id) FROM first_table WHERE id = 89;
