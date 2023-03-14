@@ -1,2 +1,2 @@
 -- showing all the rows
-SHOW SCHEMA TABLE first_table;
+SHOW * FROM TABLE first_table;
