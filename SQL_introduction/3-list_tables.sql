@@ -1,0 +1,2 @@
+-- Listing database tables.
+SHOW *;
