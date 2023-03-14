@@ -1,2 +1,2 @@
 -- showing all the rows
-SHOW * FROM TABLE first_table;
+SHOW * FROM first_table;
