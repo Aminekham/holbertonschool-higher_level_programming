@@ -1,3 +1,3 @@
 -- listing all the records
 SELECT score, name FROM second_table
-WHEN score >= 10;
+WHEN score BETWEEN 10 AND 100;
