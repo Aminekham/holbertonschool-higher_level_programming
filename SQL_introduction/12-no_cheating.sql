@@ -1,2 +1,2 @@
 -- changing bob score
-INSERT IN second_table WHERE name IS 'bob' score VALUES (10);
+UPDATE second_table WHERE name IS 'bob' SET score = 10;
