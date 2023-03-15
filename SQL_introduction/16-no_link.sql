@@ -1,2 +1,2 @@
 -- Listing records
-SELECT score, name FROM second_table WHERE name IS NOT NULL ORDER BY DESC;
+SELECT score, name FROM second_table ORDER BY DESC WHERE name IS NOT NULL;
