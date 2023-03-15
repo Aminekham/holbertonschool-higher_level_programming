@@ -1,2 +1,2 @@
 -- showing all the privaleges for the users
-SHOW GRANTS;
+SHOW GRANTS USERS;
