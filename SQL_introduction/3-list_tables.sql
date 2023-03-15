@@ -1,2 +1,2 @@
 -- Listing database tables.
-SHOW TABLE;
+SHOW TABLES;
