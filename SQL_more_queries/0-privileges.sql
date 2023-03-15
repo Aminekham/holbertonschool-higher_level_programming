@@ -1,2 +1,3 @@
 -- showing all the privaleges for the users
-SELECT * FROM information_schema.user_privileges;
+SHOW GRANTS FOR user_0d_1@localhost;
+SHOW GRANTS FOR user_0d_2@localhost;
