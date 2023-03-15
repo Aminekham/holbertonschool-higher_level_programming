@@ -45,4 +45,10 @@ testing cases :
     >>> add_integer(5, )
     103
 
+    test case 9:
+    >>> add_integer("NaN", )
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer  
+
     in the last test case we shouldnt forget that b is initialized to 98

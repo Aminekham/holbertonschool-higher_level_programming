@@ -1,0 +1,1 @@
+-- number of score in the table
