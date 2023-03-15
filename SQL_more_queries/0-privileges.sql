@@ -1,2 +1,2 @@
 -- showing all the privaleges for the users
-SELECT sql_grants;
+select * from information_schema.user_privileges;
