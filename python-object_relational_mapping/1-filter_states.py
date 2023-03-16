@@ -17,4 +17,5 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     row = cursor.fetchall()
     for r in row:
-        print(r[1][1])
+        if r[1][0] == "N":
+            print(r)
