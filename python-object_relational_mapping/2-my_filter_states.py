@@ -18,4 +18,4 @@ if __name__ == "__main__":
     row = cursor.fetchall()
     for r in row:
         if r[1] == sys.argv[4]:
-            print(r)
+            print(format(r))
