@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import sys
-import MYSQLdb
-
 """
 This module lists all the cities that we have in our database
 """
+import sys
+import MYSQLdb
+
+
 if __name__ == "__main__":
     connect = MYSQLdb.connect(
         host="localhost",
