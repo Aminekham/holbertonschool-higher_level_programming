@@ -1,22 +1,15 @@
 #!/usr/bin/python3
-"""
-Using sqlalchemy to build the data schema 
-"""
-import sys
+"""Write a python file that contains the class definition
+   of a State and an instance Base = declarative_base()"""
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
-
 
 
 Base = declarative_base()
 
 
 class State(Base):
-    """
-    create a db using python oop
-    """
-    __tablename__ = "states"
-    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
+    """class State"""
+    __tablename__ = 'states'
+    id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]))
-Base.metadata.create_all(engine)
