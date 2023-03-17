@@ -25,6 +25,6 @@ if __name__ == "__main__":
             l.append(i[1])
     for i in range(len(l)):
         if i == len(l) - 1:
-            print(i)
+            print(l[i])
         else:
-            print(i, end=" ,")
+            print(l[i], end=" ,")
