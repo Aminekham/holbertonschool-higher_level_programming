@@ -13,10 +13,17 @@ if __name__ == "__main__":
         sys.argv[3])
         )
     Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
-    s = Session()
-    rows = s.query(State).order_by(State.id).all()
+
+    # associate it with our custom Session class
+    Session = sessionmaker()
+
+    Session.configure(bind=engine)
+
+    session = Session()
+
+    rows = session.query(State).order_by(State.id).all()
+
     for state in rows:
         print("{}: {}".format(state.id, state.name))
 
-    s.close()
+    session.close()
