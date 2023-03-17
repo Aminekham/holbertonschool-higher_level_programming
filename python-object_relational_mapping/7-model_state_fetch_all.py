@@ -9,8 +9,7 @@ import sys
 if __name__ == "__main__":
     engine = create_engine("mysql://{}:{}@localhost/{}"
                            .format(sys.argv[0], sys.argv[1], sys.argv[2]))
-    sess = sessionmaker()
-    sess.configure(bind=engine)
+    sess = sessionmaker(bind=engine)
     s = sess()
     r = s.query(State).order_by(State.id).all()
     for i in r:
