@@ -27,4 +27,4 @@ if __name__ == "__main__":
         if i == len(l) - 1:
             print(l[i])
         else:
-            print(l[i], end=" ,")
+            print(l[i], end=", ")
