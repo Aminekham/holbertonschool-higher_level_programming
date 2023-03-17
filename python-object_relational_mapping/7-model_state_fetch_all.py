@@ -1,30 +1,35 @@
 #!/usr/bin/python3
-"""This script lists objects from database using sqlalchemy"""
-from model_state import Base, State
-from sqlalchemy import *
+"""
+This script lists objects from a MySQL database using sqlalchemy.
+"""
+
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 import sys
 
+def list_states():
+    """List all states in the database."""
+    if len(sys.argv) < 4:
+        print("Usage: python3 script.py <user> <password> <database>")
+        return
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        sys.argv[1],
-        sys.argv[2],
-        sys.argv[3]),
-        pool_pre_ping=True)
+    user, password, database = sys.argv[1:4]
+
+    engine = create_engine(f"mysql+mysqldb://{user}:{password}@localhost/{database}",
+                           pool_pre_ping=True)
+
     Base.metadata.create_all(engine)
 
-    # associate it with our custom Session class
-    Session = sessionmaker()
-
-    # associate it with our custom Session class
-    Session.configure(bind=engine)
-
+    Session = sessionmaker(bind=engine)
     session = Session()
 
     rows = session.query(State).order_by(State.id).all()
 
     for state in rows:
-        print("{}: {}".format(state.id, state.name))
+        print(f"{state.id}: {state.name}")
 
     session.close()
+
+if __name__ == "__main__":
+    list_states()
