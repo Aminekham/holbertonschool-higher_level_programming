@@ -7,11 +7,11 @@ import sys
 
 
 if __name__ == "__main__":
-    engine = create_engine("mysql://%s:%s@localhost/%s", 
-                           sys.argv[0], sys.argv[1], sys.argv[2])
+    engine = create_engine("mysql://{}:{}@localhost/{}"
+                           .format(sys.argv[0], sys.argv[1], sys.argv[2]))
     sess = sessionmaker()
     sess.configure(bind=engine)
     s = sess()
     r = s.query(State).order_by(State.id).all()
     for i in r:
-        print("%s: %s", i.id, i.name)
+        print("{}: {}".format(i.id, i.name))
