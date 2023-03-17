@@ -14,6 +14,7 @@ if __name__ == "__main__":
         passwd=sys.argv[2], 
         db=sys.argv[3]
         )
+    l = []
     cur = connect.cursor()
     cur.execute("SELECT cities.id, cities.name,states.name FROM cities\
                 INNER JOIN states ON cities.state_id = \
@@ -21,4 +22,9 @@ if __name__ == "__main__":
     r = cur.fetchall()
     for i in r:
         if i[2] == sys.argv[4]:
-            print(format(i[1]))
+            l.append(i[1])
+    for i in range(len(l)):
+        if i == l - 1:
+            print(i)
+        else:
+            print(i, end=" ,")
