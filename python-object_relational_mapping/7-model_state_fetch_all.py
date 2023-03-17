@@ -11,7 +11,7 @@ if __name__ == "__main__":
                            .format(sys.argv[0], sys.argv[1], sys.argv[2]))
     sess = sessionmaker(bind=engine)
     s = sess()
-    r = s.query(State).order_by(State.id).all()
+    r = s.query(State).all()
     for i in r:
         print("{}: {}".format(i.id, i.name))
     s.close()
