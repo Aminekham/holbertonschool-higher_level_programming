@@ -24,7 +24,7 @@ if __name__ == "__main__":
         if i[2] == sys.argv[4]:
             l.append(i[1])
     for i in range(len(l)):
-        if i == l - 1:
+        if i == len(l) - 1:
             print(i)
         else:
             print(i, end=" ,")
