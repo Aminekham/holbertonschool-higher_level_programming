@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-using python to create our database
-including the sqlalchemy module
-"""
+"""using python to create our database
+including the sqlalchemy module"""
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 import sys
