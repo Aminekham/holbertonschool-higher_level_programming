@@ -2,8 +2,8 @@
 """
 This module lists all the cities that we have in our database
 """
-import sys
 import MYSQLdb
+import sys
 
 
 if __name__ == "__main__":
