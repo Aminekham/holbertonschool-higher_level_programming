@@ -14,7 +14,8 @@ if __name__ == "__main__":
         db=sys.argv[3]
         )
     cursor = connect.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC", sys.argv[4])
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     row = cursor.fetchall()
     for r in row:
-        print(format(r))
+        if r[1] == sys.argv[4]:
+            print(format(r))
