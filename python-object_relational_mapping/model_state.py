@@ -5,9 +5,11 @@ Using sqlalchemy to build the data schema
 import sys
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relation, sessionmaker
+
+
 
 Base = declarative_base()
+
 
 class State(Base):
     """
