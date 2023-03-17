@@ -14,4 +14,4 @@ if __name__ == "__main__":
     s = sess()
     r = s.query(State).order_by(State.id).all()
     for i in r:
-        print(f"{i.id}: {i.name}")
+        print("%s: %s", i.id, i.name)
