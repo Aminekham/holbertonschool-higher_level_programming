@@ -15,3 +15,4 @@ if __name__ == "__main__":
     r = s.query(State).order_by(State.id).all()
     for i in r:
         print("{}: {}".format(i.id, i.name))
+    s.close()
