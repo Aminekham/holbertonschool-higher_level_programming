@@ -1,22 +1,27 @@
 #!/usr/bin/python3
-"""
-This script lists all State objects from a MySQL database
-"""
-
+"""Lists all states from the database hbtn_0e_0_usa"""
+import sqlalchemy
+import MySQLdb
 import sys
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
 
 if __name__ == "__main__":
-    user = sys.argv[1]
+
+    username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                            .format(user, password, database))
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    states = session.query(State).order_by(State.id)
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
-    session.close()
+
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=database)
+
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+
+    result = cur.fetchall()
+    for row in result:
+        print(row[0], end="")
+        print(": ", end="")
+        print(row[1])
