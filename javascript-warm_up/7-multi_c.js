@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const args = process.args;
+const args = process.argv;
 if (args[2] == null) {
   console.log('Missing number of occurrences');
 }
