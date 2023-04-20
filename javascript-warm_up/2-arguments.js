@@ -5,5 +5,5 @@ if (args[1] == null){
     console.log("No argument")
 }
 else{
-    console.log("Argument found")
+    console.log("Arguments found")
 }
