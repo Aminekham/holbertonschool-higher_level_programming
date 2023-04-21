@@ -3,13 +3,16 @@
 class Rectangle {
   constructor (w, h) {
     if (w <= 0 && h <= 0) {
-      return(undefined, undefined);
+      this.width = undefined;
+      this.height = undefined;
     }
     else if (h <= 0) {
-        return(undefined, undefined);
+      this.width = undefined;
+      this.height = undefined;
     }
     else if (w <= 0) {
-        return(undefined, undefined);
+      this.width = undefined;
+      this.height = undefined;
     }
     else {
       this.width = w;
