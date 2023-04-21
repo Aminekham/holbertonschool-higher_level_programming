@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-
 const Rectangle = require('./5-square.js');
 
 class Square extends Rectangle {
