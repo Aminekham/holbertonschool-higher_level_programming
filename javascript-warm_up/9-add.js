@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
+args = proecess.argv;
 function add(a, b){
-  args = proecess.argv;
-
-  console.log(args[2] + args[3]);
+  console.log(parseInt(a) + parseInt(b));
 }
+
+add(args[2], args[3])
