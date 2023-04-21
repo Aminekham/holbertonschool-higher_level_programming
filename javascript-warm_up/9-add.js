@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-args = proecess.argv;
+args = process.argv;
 function add(a, b){
   console.log(parseInt(a) + parseInt(b));
 }
