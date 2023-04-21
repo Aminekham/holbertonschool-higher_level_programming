@@ -3,7 +3,7 @@
 exports.esrever = function (list){
   l = [];
   for (let i = list.length; i >= 0; i--){
-    l [i - list.length] = list[i];
+    l.psuh(list[i]);
   }
   return(l);
 }
