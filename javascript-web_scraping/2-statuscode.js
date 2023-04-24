@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const link = process.argv[2];
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 async function getting_status(link) {
   const fetch_url = await fetch(link);
