@@ -5,5 +5,5 @@ request(link, function print_status(error, response, body){
   if (error) {
     console.error(error);
   }
-  console.log('code: ',response.statusCode);
+  console.log('code:',response.statusCode);
 });
