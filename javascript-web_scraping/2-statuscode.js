@@ -1,6 +1,5 @@
 #!/usr/bin/node
 const link = process.argv[2];
+const url_response = fetch(link);
 
-fetch(link).then(Response => {
-  console.log(Response.status);
-});
+console.log(url_response.status);
