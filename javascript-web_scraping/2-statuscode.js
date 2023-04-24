@@ -1,5 +1,9 @@
 #!/usr/bin/node
 const link = process.argv[2];
-const url_response = async(fetch(link));
 
-console.log(url_response.status);
+async function getting_status(link) {
+  const fetch_url = await fetch(link);
+  console.log(fetch_url.status);
+}
+
+getting_status(link);
