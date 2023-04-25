@@ -3,6 +3,9 @@
 const request = require('request');
 const link = process.argv[2];
 request(link, function (error, body, status) {
+  if (error){
+    console.error(error);
+  }
   const parsed_json = JSON.parse(body);
   const list = parsed_json.results;
   const chars = list[0].characters;
