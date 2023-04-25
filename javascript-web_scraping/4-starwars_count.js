@@ -12,8 +12,10 @@ request(link, function (error, response, body) {
     return;
   }
   const parsed_json = JSON.parse(body);
+  l = [];
+  l.push(parsed_json);
   for(let j = 0; j < body.length; j++){
-    const list = parsed_json[j].results;
+    const list = l[j].results;
     const chars = list[0].characters;
     let count = 0;
     for (let i=0; i < chars.length; i++) {
