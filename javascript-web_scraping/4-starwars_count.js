@@ -7,13 +7,13 @@ request(link, function (error, response, body) {
     console.error(error);
     return;
   }
-  const parsed_json = JSON.parse(body);
-  const list = parsed_json.results;
+  const parsed = JSON.parse(body);
+  const list = parsed.results;
   let count = 0;
-  for(let j = 0; j < list.length; j++){
+  for (let j = 0; j < list.length; j++) {
     const chars = list[j].characters;
-    for (let i=0; i < chars.length; i++) {
-      if (chars[i] == "https://swapi-api.hbtn.io/api/people/18/"){
+    for (let i = 0; i < chars.length; i++) {
+      if (chars[i] === 'https://swapi-api.hbtn.io/api/people/18/') {
         count = count + 1;
       }
     }
