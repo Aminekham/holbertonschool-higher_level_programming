@@ -3,8 +3,8 @@
 const request = require('request');
 const apiUrl = process.argv[2];
 
-request(apiUrl, function (error, response, body) {
-
+request (apiUrl, function (error, response, body) {
+  if (error) throw error;
   const tasks = JSON.parse(body);
   const completedTasks = {};
   for (let i = 0; i < tasks.length; i++) {
@@ -14,8 +14,8 @@ request(apiUrl, function (error, response, body) {
         completedTasks[task.userId]++;
     } else {
         completedTasks[task.userId] = 1;
+      }
     }
   }
-}
   console.log(completedTasks);
-  });
+});
