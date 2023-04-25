@@ -11,5 +11,5 @@ request(link, function(error, body, status) {
       dict[x] = 0;
     }
   }
-  console.log(dict[2]);
+  console.log(dict);
 })
