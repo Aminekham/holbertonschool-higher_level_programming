@@ -13,9 +13,9 @@ request(link, function (error, response, body) {
   }
   const parsed_json = JSON.parse(body);
   console.log(parsed_json);
-  for(let j = 0; j < body.length; j++){
-    const list = parsed_json.results;
-    const chars = list[0].characters;
+  const list = parsed_json.results;
+  for(let j = 0; j < list.length; j++){
+    const chars = list[j].characters;
     let count = 0;
     for (let i=0; i < chars.length; i++) {
       if (chars[i] == "https://swapi-api.hbtn.io/api/people/18/"){
