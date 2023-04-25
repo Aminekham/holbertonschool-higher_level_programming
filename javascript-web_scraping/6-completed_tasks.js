@@ -7,7 +7,7 @@ request(link, function(error, body, status) {
   let dict = {};
   for(let j = 0; j < parsed.length; j++) {
     x = parsed[j].userId;
-    if (dict[x] != 0){
+    if (dict[x] != 0 || !dict[x]){
       dict[x] = 0;
     }
   }
