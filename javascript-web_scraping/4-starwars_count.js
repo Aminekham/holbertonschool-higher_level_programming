@@ -15,7 +15,7 @@ request(link, function (error, response, body) {
   l = [];
   l.push(parsed_json);
   for(let j = 0; j < body.length; j++){
-    const list = l[j].results;
+    const list = l[j][j].results;
     const chars = list[0].characters;
     let count = 0;
     for (let i=0; i < chars.length; i++) {
