@@ -5,9 +5,7 @@ const fs = require('fs');
 const link = process.argv[2];
 const filename = process.argv[3];
 request(link, function(error, body, status){
-  const parsed = JSON.parse(body);
-  console.log(parsed);
-  fs.writeFile(filename, body, err =>{
+  fs.writeFile(filename, 'utf-8' ,body, err =>{
     if (err) throw err;
   });
 });
