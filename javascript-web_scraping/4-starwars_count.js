@@ -12,12 +12,14 @@ request(link, function (error, response, body) {
     return;
   }
   const parsed_json = JSON.parse(body);
-  const list = parsed_json.results;
-  const chars = list[0].characters;
-  let count = 0;
-  for (let i=0; i < chars.length; i++) {
-    if (chars[i] == "https://swapi-api.hbtn.io/api/people/18/"){
-      count = count + 1;
+  for(let j = 0; j < body.length; j++){
+    const list = parsed_json[j].results;
+    const chars = list[0].characters;
+    let count = 0;
+    for (let i=0; i < chars.length; i++) {
+      if (chars[i] == "https://swapi-api.hbtn.io/api/people/18/"){
+        count = count + 1;
+      }
     }
   }
   console.log(count);
