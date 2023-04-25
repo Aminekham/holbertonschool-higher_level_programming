@@ -1,15 +1,21 @@
 #!/usr/bin/node
 
 const request = require('request');
-const link = process.argv[2];
-request(link, function(error, body, status) {
-  const parsed = JSON.parse(body);
-  const dict = {};
-  for(let j = 0; j < parsed.length; j++) {
-    const id = parsed[j].userId;
-    if (dict[id] === undefined) {
-      dict[x] = 0;
+const apiUrl = process.argv[2];
+
+request(apiUrl, function (error, response, body) {
+
+    const tasks = JSON.parse(body);
+    const completedTasks = {};
+    for (let i = 0; i < tasks.length; i++) {
+      const task = tasks[i];
+      if (task.completed) {
+        if (task.userId in completedTasks) {
+          completedTasks[task.userId]++;
+        } else {
+          completedTasks[task.userId] = 1;
+        }
+      }
     }
-  }
-  console.log(dict);
-})
+    console.log(completedTasks);
+  });
