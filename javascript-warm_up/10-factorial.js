@@ -2,9 +2,6 @@
 
 args = process.argv;
 function fact (a) {
-  if (a == NaN) {
-    return(NaN);
-  }
   if (a == 1) {
     return(1);
   }
